@@ -1,0 +1,25 @@
+{
+  "name": "ver_anal_web",
+  "version": "1.0.0",
+  "description": "A web solution for veridion data ",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "data",
+    "analysis"
+  ],
+  "type": "module",
+  "author": "Baghici Gabriel-Cristian",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "faunadb": "^4.8.0",
+    "nodemon": "^3.0.1",
+    "openai": "^4.16.1"
+  }
+}

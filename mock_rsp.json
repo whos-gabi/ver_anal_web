@@ -1,0 +1,280 @@
+{
+    "soleadify_id": "6ed40f85-93e4-11eb-91fb-73d498260b10",
+    "match_score": 1,
+    "match_method": "exact_name_street_or_postcode",
+    "company_name": "McKinsey & Company",
+    "company_legal_names": [
+        "McKinsey & Company, Inc.",
+        "McKinsey Incorporated"
+    ],
+    "company_commercial_names": [
+        "McKinsey & Company"
+    ],
+    "main_country_code": "US",
+    "main_country": "United States",
+    "main_region": "New York",
+    "main_city": "New York",
+    "main_street": "East 52nd Street",
+    "main_street_number": "55",
+    "main_postcode": "10022",
+    "main_latitude": "40.71118389",
+    "main_longitude": "-74.01101817",
+    "locations": [
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "New York",
+            "city": "New York",
+            "postcode": "10022",
+            "street": "East 52nd Street",
+            "street_number": "55",
+            "latitude": 40.758827209472656,
+            "longitude": -73.97452545166016
+        },
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "Georgia",
+            "city": "Atlanta",
+            "postcode": "30306",
+            "street": "Ponce de Leon Ave",
+            "street_number": "725",
+            "latitude": 33.77186965942383,
+            "longitude": -84.36370849609375
+        },
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "California",
+            "city": "San Francisco",
+            "postcode": "94104",
+            "street": "California Street",
+            "street_number": "555",
+            "latitude": 37.79254913330078,
+            "longitude": -122.40426635742188
+        },
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "North Carolina",
+            "city": "Charlotte",
+            "postcode": "28202",
+            "street": "South Tryon Street",
+            "street_number": "300",
+            "latitude": 35.22589874267578,
+            "longitude": -80.84615325927734
+        },
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "Illinois",
+            "city": "Chicago",
+            "postcode": "60601",
+            "street": "East Randolph",
+            "street_number": "300",
+            "latitude": 41.88435745239258,
+            "longitude": -87.62041473388672
+        },
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "Illinois",
+            "city": "Chicago",
+            "postcode": "60607",
+            "street": "West Washington Blvd.",
+            "street_number": "1229",
+            "latitude": 41.88288116455078,
+            "longitude": -87.6578369140625
+        },
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "Colorado",
+            "city": "Denver",
+            "postcode": "80202",
+            "street": "Larimer St",
+            "street_number": "1800",
+            "latitude": 39.7509880065918,
+            "longitude": -104.9944839477539
+        },
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "Texas",
+            "city": "Houston",
+            "postcode": "77002",
+            "street": "Main Street",
+            "street_number": "609",
+            "latitude": 29.759254455566406,
+            "longitude": -95.36273956298828
+        },
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "New York",
+            "city": "New York",
+            "postcode": "10007",
+            "street": "Broadway",
+            "street_number": "195",
+            "latitude": 40.71073532104492,
+            "longitude": -74.00968170166016
+        },
+        {
+            "country_code": "US",
+            "country": "United States",
+            "region": "D.C",
+            "city": "Washington",
+            "postcode": "20036",
+            "street": "Nineteenth Street",
+            "street_number": "1200",
+            "latitude": 38.89503860473633,
+            "longitude": -77.03654479980469
+        }
+    ],
+    "num_locations": 140,
+    "company_type": "Private",
+    "year_founded": 1926,
+    "employee_count": 38000,
+    "estimated_revenue": 10600000000,
+    "short_description": "McKinsey & Company is the trusted advisor and counselor to many of the world's most influential businesses and institutions.",
+    "long_description": "McKinsey & Company is a management consulting firm founded in 1926 by University of Chicago professor James O. McKinsey, that advises on strategic management to corporations, governments, and other organizations. McKinsey is the oldest and largest of the \"Big Three\" management consultancies (MBB), the world's three largest strategy consulting firms by revenue. It has consistently been recognized by Vault as the most prestigious consulting firm in the world.|Under the leadership of Marvin Bower, McKinsey expanded into Europe during the 1940s and 1950s. In the 1960s, McKinsey's Fred Gluck—along with Boston Consulting Group's Bruce Henderson, Bill Bain at Bain & Company, and Harvard Business School's Michael Porter—transformed corporate culture. A 1975 publication by McKinsey's John L. Neuman introduced the business practice of \"overhead value analysis\" that contributed to a downsizing trend that eliminated many jobs in middle management.",
+    "business_tags": [
+        "Management Consulting",
+        "Consulting Firm",
+        "Business Insights",
+        "Strategy Consulting",
+        "Sales Insights"
+    ],
+    "main_business_category": "Business Consulting",
+    "main_industry": "Business",
+    "main_sector": "Services",
+    "primary_phone": "+12124151387",
+    "phone_numbers": [
+        "+14043353000",
+        "+14043353000",
+        "+17373482400",
+        "+14159810250",
+        "+16504946262",
+        "+13125513500"
+    ],
+    "primary_email": "info@support.mckinsey.com",
+    "emails": [
+        "info@support.mckinsey.com"
+    ],
+    "other_emails": [
+        "john_warner@mckinsey.com",
+        "advanced_industries_ae_internet_inquiries@mckinsey.com",
+        "matt_portner@mckinsey.com",
+        "ee_huei_koh@mckinsey.com",
+        "nicolas_denis@mckinsey.com",
+        "mauricio_janauskas@mckinsey.com",
+        "ryan_murphy@mckinsey.com",
+        "richard_lee@mckinsey.com",
+        "ian_jefferson@mckinsey.com",
+        "delphine_zurkiya@mckinsey.com"
+    ],
+    "website_url": "https://www.mckinsey.com/",
+    "website_domain": "mckinsey.com",
+    "website_tld": "com",
+    "website_language_code": "en",
+    "facebook_url": "https://www.facebook.com/McKinsey",
+    "twitter_url": "https://twitter.com/McKinsey",
+    "instagram_url": "https://www.instagram.com/mckinseyco/",
+    "linkedin_url": "https://www.linkedin.com/company/mckinsey/",
+    "ios_app_url": "https://apps.apple.com/us/app/id674902075",
+    "android_app_url": "https://play.google.com/store/apps/details?id=com.mckinsey.mckinseyinsights",
+    "youtube_url": null,
+    "cms": null,
+    "alexa_rank": null,
+    "technologies": [
+        "analytics: akamai mpulse",
+        "analytics: adobe analytics",
+        "analytics: soasta mpulse",
+        "analytics: google ads conversion tracking",
+        "issue trackers: new relic",
+        "rum: akamai mpulse",
+        "customer data platform: adobe experience platform identity service",
+        "rum: boomerang",
+        "web frameworks: microsoft asp.net",
+        "javascript frameworks: react",
+        "cdn: akamai",
+        "miscellaneous: onetrust",
+        "miscellaneous: optanon",
+        "captchas: recaptcha",
+        "cookie compliance: onetrust",
+        "tag managers: adobe dynamic tag management",
+        "operating systems: windows server",
+        "seo tool: facebook friendly",
+        "web servers: iis",
+        "saas: adobe experience platform identity service",
+        "tag managers: google tag manager",
+        "retargeting: google remarketing tag",
+        "dev tools: new relic",
+        "security: akamai bot manager",
+        "analytics: new relic"
+    ],
+    "naics_2022": {
+        "primary": {
+            "code": "541618",
+            "label": "Other Management Consulting Services"
+        },
+        "secondary": null
+    },
+    "nace_rev2": [
+        {
+            "code": "74.9",
+            "label": "Other professional, scientific and technical activities n.e.c."
+        }
+    ],
+    "ncci_codes_28_1": [
+        "8742"
+    ],
+    "sic": [
+        {
+            "code": "8748",
+            "label": "Business Consulting Services, NEC (except educational testing and consulting, economic consulting, safety and security, agriculture consulting, environmental consulting firms, urban planning and industrial development organizations)"
+        }
+    ],
+    "isic_v4": [
+        {
+            "code": "7490",
+            "label": "Other professional, scientific and technical activities n.e.c."
+        }
+    ],
+    "sics_industry": {
+        "code": "SV-PS",
+        "label": "Professional & Commercial Services"
+    },
+    "sics_sector": {
+        "code": "SV",
+        "label": "Services"
+    },
+    "sics_subsector": {
+        "code": "SV.3",
+        "label": "Consumer Services"
+    },
+    "ibc_insurance": [
+        {
+            "code": "641401",
+            "label": "Management Consultants"
+        },
+        {
+            "code": "641403",
+            "label": "Operations Consultants"
+        },
+        {
+            "code": "641406",
+            "label": "Strategic Consultants"
+        },
+        {
+            "code": "641405",
+            "label": "Marketing Consultants"
+        },
+        {
+            "code": "641411",
+            "label": "Information Technology Consultants"
+        }
+    ],
+    "created_at": "2021-08-23T12:27:43.000Z",
+    "last_updated_at": "2022-07-22T15:08:10.109Z"
+}
