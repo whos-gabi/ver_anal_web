@@ -47,4 +47,4 @@ async function fetchCountryData(country) {
     return {};
   }
 }
-export default { main, fetchCountryData };
+export default {  fetchCountryData };
