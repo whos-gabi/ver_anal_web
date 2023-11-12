@@ -20,15 +20,15 @@ const trends_instructions = "You will be given a company details via a JSON,"+
 
 const business_details_inst = "You are the best business consultant and analyst in the world. You are given a company details via a JSON,"+
 " tell me about geographical presence based on data for building comercial credit scores \n\n"+
-  "Please make sure you use this format: { \"title\": \"text\", \"description\": \"text\" \n }"+
-  "This is what information i need and some examples with how title should look and description examples: \n"+
-  "business_sustability: The company's history, established in 1926, showcases its long-standing presence in the business world, suggesting stability and reliability.\n"+
-  "employee_count: With a workforce of 38,000 employees, the scale of operations and human resources can be indicative of the company's capacity and stability. \n"+
-  "online_presence: A company's online presence is a good indicator of its stability and reliability. A company that has a website, social media accounts, and a blog is more likely to be stable and reliable than one that does not.\n"+
-  "contact_information: A company's contact information is a good indicator of its stability and reliability. A company that has a phone number, email address, and physical address is more likely to be stable and reliable than one that does not.\n"+
-  "company_type: Being a private company, certain aspects of its operations and financial data may be less transparent compared to public companies, and this could be considered in the credit assessment."
-  "industry_reputation: Information about Bancpost's significant investments in electronic channels of distribution may influence its creditworthiness."+
-  "Please be strict about title and description keys and return me a JSON format no bigger than this.";
+  "Please make sure you use this format: { \"keyword\": \"Elaboration of the analysis\" }"+
+  "This is what information i need and an example On that the keys need to look like: \n"+
+  "business_sustability:\n"+
+  "employee_count: \n"+
+  "online_presence:\n"+
+  "contact_information: \n"+
+  "company_type: \n"+
+  "industry_reputation: "+
+  "Please be strict about title and description keys and return me a JSON format with all 6 titles provided.";
 
 
 class AssistantManager {
