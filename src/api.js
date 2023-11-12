@@ -14,7 +14,7 @@ const aiLayer = new assistantManager();
 
 // const logsLayer = new CP_LogsLayer();
 
-const counties = JSON.parse(fs.readFileSync("./counties.json", "utf8"));
+// const counties = JSON.parse(fs.readFileSync("./counties.json", "utf8"));
 // const fncs = new functions();
 
 router.post("/api/analyse", async function (req, res) {
