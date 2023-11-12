@@ -218,7 +218,7 @@ function checkAudit(data) {
 
   const totalTests = trust_res.info.length + trust_res.wrn.length;
   const trustIndex = ((totalTests - trust_res.wrn.length) * 100) / totalTests;
-  trust_res.trust = parseFloat(trustIndex.toFixed(2));
+  trust_res.trust = trustIndex.toFixed(2);
 
   return trust_res;
 }

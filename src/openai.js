@@ -14,9 +14,22 @@ const openai = new OpenAI({
 //   "openai_instructions/complex_search_inst.txt",
 //   "utf8"
 // );
-const instructions = "You will be given a company details via a JSON,"+
+const trends_instructions = "You will be given a company details via a JSON,"+
 " please analyse the possile trends from its industry and description and return 2 to 4 trends formed strictly from one or two words in a json aray for future google trends analytics\n\n"+
 "Please make sure you use this format: { \"trends\": \"trend1, trend2, trend3\" \n }";
+
+const business_details_inst = "You are the best business consultant and analyst in the world. You are given a company details via a JSON,"+
+" tell me about geographical presence based on data for building comercial credit scores \n\n"+
+  "Please make sure you use this format: { \"title\": \"text\", \"description\": \"text\" \n }"+
+  "This is what information i need and some examples with how title should look and description examples: \n"+
+  "business_sustability: The company's history, established in 1926, showcases its long-standing presence in the business world, suggesting stability and reliability.\n"+
+  "employee_count: With a workforce of 38,000 employees, the scale of operations and human resources can be indicative of the company's capacity and stability. \n"+
+  "online_presence: A company's online presence is a good indicator of its stability and reliability. A company that has a website, social media accounts, and a blog is more likely to be stable and reliable than one that does not.\n"+
+  "contact_information: A company's contact information is a good indicator of its stability and reliability. A company that has a phone number, email address, and physical address is more likely to be stable and reliable than one that does not.\n"+
+  "company_type: Being a private company, certain aspects of its operations and financial data may be less transparent compared to public companies, and this could be considered in the credit assessment."
+  "industry_reputation: Information about Bancpost's significant investments in electronic channels of distribution may influence its creditworthiness."+
+  "Please be strict about title and description keys and return me a JSON format no bigger than this.";
+
 
 class AssistantManager {
   constructor() {
@@ -29,7 +42,7 @@ class AssistantManager {
       console.log("Setting up gpt-4-1106-preview ...\n");
       this.assistant = await openai.beta.assistants.create({
         name: "Inspector Gadget",
-        instructions: instructions,
+        instructions: trends_instructions,
         tools: [{ type: "code_interpreter" }],
         model: "gpt-4-1106-preview",
       });
@@ -57,7 +70,7 @@ class AssistantManager {
       messages: [
         {
           role: "system",
-          content: instructions,
+          content: trends_instructions,
         },
         {
           role: "user",
@@ -71,31 +84,53 @@ class AssistantManager {
     });
     return completion.choices[0].message.content;
   }
+  async generateAuditAI(payload) {
 
-  async generateComplexSearchJSON(payload) {
-    if (!this.assistant) {
-      console.error("Assistant not initialized.");
-      return;
-    }
-
-    try {
-      //create a completitotion on local assistant thread
-      const completion = await openai.beta.assistants.complete(
-        this.assistant.id,
+    const completion = await openai.chat.completions.create({
+      messages: [
         {
-          prompt: payload,
-          max_tokens: 100,
-          temperature: 0.9,
-          n: 1,
-          logprobs: 10,
-          echo: true,
-          stop: ["\n"],
-        }
-      );
-    } catch (error) {
-      console.error("An error occurred while asking the assistant:", error);
-    }
+          role: "system",
+          content: business_details_inst,
+        },
+        {
+          role: "user",
+          content:
+            "Analyse this company with the format that i told you:\n" +
+            JSON.stringify(payload),
+        },
+      ],
+      response_format: { type: "json_object" },
+      model: "gpt-4-1106-preview",
+    });
+    return completion.choices[0].message.content;
   }
+
+
+
+  // async generateComplexSearchJSON(payload) {
+  //   if (!this.assistant) {
+  //     console.error("Assistant not initialized.");
+  //     return;
+  //   }
+
+  //   try {
+  //     //create a completitotion on local assistant thread
+  //     const completion = await openai.beta.assistants.complete(
+  //       this.assistant.id,
+  //       {
+  //         prompt: payload,
+  //         max_tokens: 100,
+  //         temperature: 0.9,
+  //         n: 1,
+  //         logprobs: 10,
+  //         echo: true,
+  //         stop: ["\n"],
+  //       }
+  //     );
+  //   } catch (error) {
+  //     console.error("An error occurred while asking the assistant:", error);
+  //   }
+  // }
 
   async generateSearchJSON(userQuestion) {
     if (!this.assistant) {

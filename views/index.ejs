@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Anomaly Audit</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo_sm.png" alt="" width="60" height="60" class="d-inline-block align-text-top m-1 mx-3">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-3">
+            <a class="nav-link active fw-bold" href="#whyus">Why Us</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link active fw-bold" href="#product">Product</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="neo-btn" href="#search">Start now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center my-3">
+        <h1 class="fs-1">Easily spot financial risks.</h1>
+        <div class="row justify-content-center my-4">
+          <div class="col-8" id="search">
+
+            <form action="/api/analyse" method="POST">
+
+              <div class="row mx-2">
+                <div class="col-6">
+                  <input class="w-100 neo-input" id="company_name" type="text" value="Dynamic Web Solutions"
+                    title="company_name" placeholder="company_name" name="company_name">
+                </div>
+                <div class="col-6">
+                  <input class="w-100 neo-input" id="company_website" type="text" value="https://dynweb.org/"
+                    title="company_website" placeholder="company_website" name="company_website">
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-4">
+                  <button class="neo-btn my-2" type="submit">Search</button>
+
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- display a card if index.ejs has data from backend  -->
+        <% if (data) { %>
+          <!-- Display a card if data exists -->
+          <div class="row justify-content-center my-4" id="whyus">
+            <div class="col-10">
+              <div class="card neo-card w-100 p-4">
+                <h2 class="fs-2 my-2">
+                  Result:
+                </h2>
+                <div class="row justify-content-start">
+                  <div class="col-12 text-start">
+
+                    <strong>Company Type:</strong>
+                    <%= data.companyData.company_type %>
+                      <br>
+                      <strong>Short Description:</strong>
+                      <%= data.companyData.short_description %>
+                  </div>
+                </div>
+                <hr>
+                <div class="row justify-content-start">
+                  <div class="col-12 text-start">
+                    <h3>Data for comercial credit scores</h3>
+
+                    <h5>Business Sustanability:</h5>
+                    <p>
+                      <%= data.businessAnal.business_sustability%>
+                    </p>
+                    <h5>Employee Count:</h5>
+                    <p>
+                      <%= data.businessAnal.employee_count%>
+                    </p>
+                    <h5>Online Presence:</h5>
+                    <p>
+                      <%= data.businessAnal.online_presence%>
+                    </p>
+                    <h5>Contact Information:</h5>
+                    <p>
+                      <%= data.businessAnal.contact_information%>
+                    </p>
+                    <h5>Company Type:</h5>
+                    <p>
+                      <%= data.businessAnal.company_type%>
+                    </p>
+                    <h5>Industry Reputation:</h5>
+                    <p>
+                      <%= data.businessAnal.industry_reputation%>
+                    </p>
+
+
+                    <h4>Warning:</h4>
+                    <ul>
+                      <% for (let wrnItem of data.audit.wrn) { %>
+                        <li>
+                          <%= wrnItem.qw %>
+                            <%= wrnItem.rsp ? '✅' :'❌'%>
+                        </li>
+                        <% } %>
+                    </ul>
+                  </div>
+                </div>
+
+                <h4 class="my-2"> SCORE <%= data.audit.trust %> %
+                </h4>
+              </div>
+            </div>
+          </div>
+          <% } else { %>
+            <!-- Display something else if data does not exist -->
+            <p>Waiting for your search</p>
+            <% } %>
+
+
+
+
+              <div class="row justify-content-center my-4" id="whyus">
+                <div class="col-10">
+                  <div class="card neo-card w-100 p-4">
+                    <h2 class="fs-2 my-2">
+                      Why us?
+                    </h2>
+                    <p class="my-2">In the world of finance, trust is everything. At
+                      <b>
+                        AnomalyAudit
+                      </b>
+                      , we've simplified the process of ensuring
+                      financial integrity for both investors and companies seeking
+                      <b>
+
+                        reliable partners.
+                      </b>Whether you're an investor looking for trustworthy opportunities or a company vetting
+                      potential
+                      partners,<b>AnomalyAudit</b> offers real-time monitoring and timely alerts, keeping you informed
+                      about
+                      any
+                      changes in a
+                      company's financial status.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row justify-content-center my-4" id="product">
+                <div class="col-10">
+                  <div class="card neo-card w-100 p-4">
+                    <h2 class="fs-2 my-2">
+                      Product
+                    </h2>
+                    <p class="my-2">Powered by advanced algorithms, <b>
+                        AnomalyAudit
+                      </b> conducts real-time monitoring and provides
+                      customized reports, ensuring a
+                      <b>
+                        nuanced examination
+                      </b>
+                      of financial records tailored to specific concerns.
+                      We prioritize trust and data security, treating user information with utmost confidentiality.
+                      AnomalyAudit
+                      is not just a verification tool, it's a partner in making financial due diligence
+                      <b>
+                        accessible and reliable
+                      </b>.
+                      With us, users can navigate the complexities of financial transparency confidently. Choose
+                      AnomalyAudit
+                      for swift, secure, and insightful financial verification.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

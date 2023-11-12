@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+/* create a universal style of neomorphism for buttons and cards  */
+/* https://neumorphism.io/#55b9f3 */
+
+* {
+    font-family: "Kumbh Sans", sans-serif !important;
+  }
+  
+  .neo {
+    background: #e0e5ec;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+  .neo-btn {
+    width: 100%;
+    min-height: 3rem;
+    border-radius: 25px;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    border: none;
+    outline: none;
+    background: none;
+    background-color: #699BF7;
+    font-size: 18px;
+    color: #000;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    
+
+  }
+  a{
+    text-decoration: none;
+  }
+  .neo-btn:hover{
+    background: #e0e5ec;
+    /* box-shadow:outset  */
+    box-shadow: inset 20px 20px 40px #bebebe, inset -20px -20px 40px #ffffff;
+
+    background-color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.099);
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+  }
+  
+  .bg-transparent {
+    background-color: transparent !important;
+  }
+  
+  .neo-card {
+    padding: 60px 35px 35px 35px;
+    border-radius: 40px;
+    background: #fff;
+    box-shadow: 13px 13px 10px #cbced1, -13px -13px 10px #ffffff;
+  }
+  
+  .fields {
+    width: 100%;
+    padding: 75px 5px 5px 5px;
+  }
+  
+  .fields input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 20px 0px 20px 5px;
+  }
+  
+  .neo-input {
+    margin-bottom: 30px;
+    height: 2.5rem;
+    padding: 10px;
+    border-radius: 25px;
+    background: #fff;
+  }
+  
+  p{
+    font-size: 18px;
+    color: #000;
+    font-weight: semi-bold;
+  }
+  b{
+    font-weight: bold;
+  }
+  
