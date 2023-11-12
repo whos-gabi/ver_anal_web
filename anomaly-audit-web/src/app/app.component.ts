@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { MainModule } from './main/main.component';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'customer-path-web';
+  title = 'anomaly-audit-web';
 }

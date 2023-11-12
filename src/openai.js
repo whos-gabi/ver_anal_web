@@ -1,48 +1,41 @@
 import OpenAI from "openai";
 import dotenv from "dotenv";
+import fs from "fs";
 dotenv.config();
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_KEY,
 });
 
-const sampleResponse = {
-  title: "String",
-  response: [
-    {
-      rsp_header: "String",
-      rsp_body: "String",
-    },
-  ],
-  date: "String",
-  location: "String",
-};
+// const filter_eg = JSON.stringify(JSON.parse(
+//   fs.readFileSync("openai_instructions/filter_eg.json", "utf8")), null, 2
+// );
+// const documentation_inst = fs.readFileSync(
+//   "openai_instructions/complex_search_inst.txt",
+//   "utf8"
+// );
+const instructions = "You will be given a company details via a JSON,"+
+" please analyse the possile trends from its industry and description and return 2 to 4 trends formed strictly from one or two words in a json aray for future google trends analytics\n\n"+
+"Please make sure you use this format: { \"trends\": \"trend1, trend2, trend3\" \n }";
 
 class AssistantManager {
   constructor() {
-    this.assistant = null;
+    this.assistant = this.createAssistant();
     this.threadId = null;
   }
-
 
   async createAssistant() {
     try {
       console.log("Setting up gpt-4-1106-preview ...\n");
       this.assistant = await openai.beta.assistants.create({
         name: "Inspector Gadget",
-        instructions:
-          "You are a natural language processing model specilalised in business analytics." +
-          " You will be given potential business details in a JSON format." +
-          " Respond to any user statement with a JSON object, no matter what the user says. You can modify the response format a bit, but try to stick to the format below.\n\n" +
-          JSON.stringify(sampleResponse, null, 2) +
-          "\n\n",
+        instructions: instructions,
         tools: [{ type: "code_interpreter" }],
         model: "gpt-4-1106-preview",
       });
 
       // Create a thread for the assistant
       this.threadId = (await openai.beta.threads.create()).id;
-
       return this.assistant;
     } catch (error) {
       console.error("Failed to create assistant:", error);
@@ -50,18 +43,71 @@ class AssistantManager {
     }
   }
 
-  async askAssistant(userQuestion) {
+  async generate(payload) {
+
+    const searchable = {
+      "company_name": payload.company_name,
+      "description": payload.long_description,
+      "business_tags": payload.business_tags,
+      "main_business_category": payload.main_business_category,
+      "main_industry": payload.main_industry,
+    }
+
+    const completion = await openai.chat.completions.create({
+      messages: [
+        {
+          role: "system",
+          content: instructions,
+        },
+        {
+          role: "user",
+          content:
+            "Generate company trands from this details:" +
+            JSON.stringify(searchable),
+        },
+      ],
+      model: "gpt-4-1106-preview",
+      response_format: { type: "json_object" },
+    });
+    return completion.choices[0].message.content;
+  }
+
+  async generateComplexSearchJSON(payload) {
     if (!this.assistant) {
       console.error("Assistant not initialized.");
       return;
     }
 
     try {
-      console.log(`\nUSER: ${userQuestion}`);
+      //create a completitotion on local assistant thread
+      const completion = await openai.beta.assistants.complete(
+        this.assistant.id,
+        {
+          prompt: payload,
+          max_tokens: 100,
+          temperature: 0.9,
+          n: 1,
+          logprobs: 10,
+          echo: true,
+          stop: ["\n"],
+        }
+      );
+    } catch (error) {
+      console.error("An error occurred while asking the assistant:", error);
+    }
+  }
 
+  async generateSearchJSON(userQuestion) {
+    if (!this.assistant) {
+      console.error("Assistant not initialized.");
+      return;
+    }
+
+    try {
       await openai.beta.threads.messages.create(this.threadId, {
         role: "user",
-        content: userQuestion,
+        content: JSON.stringify(userQuestion),
+        response_format: { type: "json_object" },
       });
 
       const run = await openai.beta.threads.runs.create(this.threadId, {
@@ -72,6 +118,8 @@ class AssistantManager {
         this.threadId,
         run.id
       );
+
+      console.log("AI: ", runStatus.status);
 
       while (runStatus.status !== "completed") {
         await new Promise((resolve) => setTimeout(resolve, 2000));

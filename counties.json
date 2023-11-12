@@ -1,0 +1,252 @@
+[
+    {
+        "id": 1,
+        "nume": "Alba",
+        "abbr": "AB"
+    },
+    {
+        "id": 2,
+        "nume": "Arad",
+        "abbr": "AR"
+    },
+    {
+        "id": 3,
+        "nume": "Arges",
+        "abbr": "AG"
+    },
+    {
+        "id": 4,
+        "nume": "Bacau",
+        "abbr": "BC"
+    },
+    {
+        "id": 5,
+        "nume": "Bihor",
+        "abbr": "BH"
+    },
+    {
+        "id": 6,
+        "nume": "Bistrita-Nasaud",
+        "abbr": "BN"
+    },
+    {
+        "id": 7,
+        "nume": "Botosani",
+        "abbr": "BT"
+    },
+    {
+        "id": 8,
+        "nume": "Brasov",
+        "abbr": "BV"
+    },
+    {
+        "id": 9,
+        "nume": "Braila",
+        "abbr": "BR"
+    },
+    {
+        "id": 10,
+        "nume": "Buzau",
+        "abbr": "BZ"
+    },
+    {
+        "id": 11,
+        "nume": "Caras-Severin",
+        "abbr": "CS"
+    },
+    {
+        "id": 12,
+        "nume": "Cluj",
+        "abbr": "CJ"
+    },
+    {
+        "id": 13,
+        "nume": "Constanta",
+        "abbr": "CT"
+    },
+    {
+        "id": 14,
+        "nume": "Covasna",
+        "abbr": "CV"
+    },
+    {
+        "id": 15,
+        "nume": "Dambovita",
+        "abbr": "DB"
+    },
+    {
+        "id": 16,
+        "nume": "Dolj",
+        "abbr": "DJ"
+    },
+    {
+        "id": 17,
+        "nume": "Galati",
+        "abbr": "GL"
+    },
+    {
+        "id": 18,
+        "nume": "Gorj",
+        "abbr": "GJ"
+    },
+    {
+        "id": 19,
+        "nume": "Harghita",
+        "abbr": "HR"
+    },
+    {
+        "id": 20,
+        "nume": "Hunedoara",
+        "abbr": "HD"
+    },
+    {
+        "id": 21,
+        "nume": "Ialomita",
+        "abbr": "IL"
+    },
+    {
+        "id": 22,
+        "nume": "Iasi",
+        "abbr": "IS"
+    },
+    {
+        "id": 23,
+        "nume": "Ilfov",
+        "abbr": "IF"
+    },
+    {
+        "id": 24,
+        "nume": "Maramures",
+        "abbr": "MM"
+    },
+    {
+        "id": 25,
+        "nume": "Mehedinti",
+        "abbr": "MH"
+    },
+    {
+        "id": 26,
+        "nume": "Mures",
+        "abbr": "MS"
+    },
+    {
+        "id": 27,
+        "nume": "Neamt",
+        "abbr": "NT"
+    },
+    {
+        "id": 28,
+        "nume": "Olt",
+        "abbr": "OT"
+    },
+    {
+        "id": 29,
+        "nume": "Prahova",
+        "abbr": "PH"
+    },
+    {
+        "id": 30,
+        "nume": "Satu Mare",
+        "abbr": "SM"
+    },
+    {
+        "id": 31,
+        "nume": "Salaj",
+        "abbr": "SJ"
+    },
+    {
+        "id": 32,
+        "nume": "Sibiu",
+        "abbr": "SB"
+    },
+    {
+        "id": 33,
+        "nume": "Suceava",
+        "abbr": "SV"
+    },
+    {
+        "id": 34,
+        "nume": "Teleorman",
+        "abbr": "TR"
+    },
+    {
+        "id": 35,
+        "nume": "Timis",
+        "abbr": "TM"
+    },
+    {
+        "id": 36,
+        "nume": "Tulcea",
+        "abbr": "TL"
+    },
+    {
+        "id": 37,
+        "nume": "Vaslui",
+        "abbr": "VS"
+    },
+    {
+        "id": 38,
+        "nume": "Valcea",
+        "abbr": "VL"
+    },
+    {
+        "id": 39,
+        "nume": "Vrancea",
+        "abbr": "VN"
+    },
+    {
+        "id": 40,
+        "nume": "Bucuresti",
+        "abbr": "B"
+    },
+    {
+        "id": 41,
+        "nume": "Bucureşti District 1",
+        "abbr": "B1"
+    },
+    {
+        "id": 42,
+        "nume": "Bucureşti District 2",
+        "abbr": "B2"
+    },
+    {
+        "id": 43,
+        "nume": "Bucureşti District 3",
+        "abbr": "B3"
+    },
+    {
+        "id": 44,
+        "nume": "Bucureşti District 4",
+        "abbr": "B4"
+    },
+    {
+        "id": 45,
+        "nume": "Bucureşti District 5",
+        "abbr": "B5"
+    },
+    {
+        "id": 46,
+        "nume": "Bucureşti District 6",
+        "abbr": "B6"
+    },
+    {
+        "id": 47,
+        "nume": "Bucureşti District 7",
+        "abbr": "B7"
+    },
+    {
+        "id": 48,
+        "nume": "Bucureşti District 8",
+        "abbr": "B8"
+    },
+    {
+        "id": 49,
+        "nume": "Călăraşi",
+        "abbr": "CL"
+    },
+    {
+        "id": 50,
+        "nume": "Giurgiu",
+        "abbr": "GR"
+    }
+]

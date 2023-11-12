@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "customer-path-web": {
+    "anomaly-audit-web": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,9 +11,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/customer-path-web",
+            "outputPath": "dist/anomaly-audit-web",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "customer-path-web:build:production"
+              "browserTarget": "anomaly-audit-web:build:production"
             },
             "development": {
-              "buildTarget": "customer-path-web:build:development"
+              "browserTarget": "anomaly-audit-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "customer-path-web:build"
+            "buildTarget": "anomaly-audit-web:build"
           }
         },
         "test": {

@@ -13,8 +13,6 @@ export class CP_LogsLayer {
 
     this.q = faunadb.query;
 
-    // this.BASE_URL =
-    //   "https://www.drpciv.ro/drpciv-booking-api/getAvailableDaysForSpecificService/1/";
   }
 
   async getAllData() {

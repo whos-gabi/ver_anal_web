@@ -11,6 +11,36 @@
             "strictness": 2
         },
         {
+            "attribute": "company_keywords",
+            "relation": "match_expression",
+            "value": {
+                "match": {
+                    "operator": "and",
+                    "operands": [
+                        {
+                            "operator": "or",
+                            "operands": [
+                                "Management Consulting",
+                                "Business Consulting"
+                            ]
+                        }
+                    ]
+                },
+                "exclude": {
+                    "operator": "and",
+                    "operands": [
+                        {
+                            "operator": "or",
+                            "operands": [
+                                "Digital Transformation"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "strictness": 1
+        },
+        {
             "attribute": "company_products",
             "relation": "match_expression",
             "value": {
